@@ -2,13 +2,58 @@
 /******** START MAIN HEADER AND NAVIGATION STYLES *********/
 
 
-header.main {
-	nav.main-nav {
+header {
+	background: url(/_assets/img/bookcase.png) no-repeat center top transparent;
+	background-size: cover;
+	.drop-shadow;
+	nav {
+		padding: 76px 0 56px;
+		background-color: #fff;
+		opacity: .9;
 		ul {
-			li{}
-				a {}
+			text-align: center;
+			div.line {
+				border-bottom: 1px solid @orange;
+				display: inline-block;
+				vertical-align: middle;
+				width: 33%;
+				padding-bottom: 15px;
 			}
-		#menu{}
+			li {
+				display: inline-block;
+				.ubuntu-light;
+				font-size: 1.3333333333333333em;
+				padding: 0 11%;
+				a {
+					color: @black;
+					text-decoration: none;
+					&:hover {
+						color: @orange;
+						.transition;
+					}
+				}
+				&#logo {
+					padding: 0 2%;
+				}
+			}
+		}
+	}
+	img#glasses {
+		width: 110%;
+		margin: 0 -5%;
+		padding: 120px 0 62px;
+	}
+	div#headline {
+		background-color: #fff;
+		opacity: .9;
+		h1 {
+			color: @black;
+			.ubuntu-light;
+			font-size: 1.6666666666666665em;
+			line-height: 1.2em;
+			padding: 58px 0;
+			text-align: center;
+		}
 	}
 }
 

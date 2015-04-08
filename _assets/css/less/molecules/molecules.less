@@ -1,11 +1,30 @@
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
+/* Modules will scale with document */
+header {
+  font-size: 1rem;
+}
+footer {
+  font-size: 1.1rem;
+}
+section {
+  font-size: 1rem;
+}
+
 body {
 	-webkit-font-smoothing: antialiased;
 }
 
-@white:		#ffffff;
+.inner {
+	max-width: 1206px;
+	margin: 0 auto;
+}
+
+@orange:		#c66c00;
+@yellow:		#c6b000;
+@blue:			#1724a9;
+@black:			#231f20;
 
 h1 {
 
@@ -21,4 +40,21 @@ h3 {
 
 p {
 
+}
+
+
+.btn {
+	background-color: @blue;
+	opacity: .6;
+	.ubuntu-bold;
+	font-size: 1.3333333333333333em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	border: none;
+	padding: 24px 32px;
+	&:hover {
+		background-color: @yellow;
+		.transition;
+	}
 }

@@ -1,0 +1,718 @@
+@charset "UTF-8";
+/* Eric Meyer's reset
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0b1 | 201101 
+	NOTE: WORK IN PROGRESS
+	USE WITH CAUTION AND TEST WITH ABANDON */
+/* Use this reset as a starting point, and customize to your needs */
+/* Slightly modified to prevent anchor elements from losing outline, as in HTML5 Boilerplate */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+}
+a {
+  background: transparent;
+  outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Meyer's reset ends here */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+b,
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+small {
+  font-size: 85%;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  background-color: #f0dddd;
+}
+/*
+ * Correct overflow not hidden in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* For image replacement */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+.ir br {
+  display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.browsehappy {
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+  font-size: 22px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999;
+}
+.browsehappy a {
+  color: yellow;
+  text-decoration: underline;
+}
+.browsehappyimg {
+  z-index: 999999999999999;
+  position: absolute;
+  left: 48%;
+  top: 12%;
+}
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: h5bp.com/s */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* h5bp.com/t */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+.pad-inner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+}
+/*==================================================*/
+/*=============== MOLECULAR STYLES ================*/
+/*===============================================*/
+/* (Common Elements that make up bigger groups elements.) */
+.ubuntu-regular {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+.ubuntu-italic {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.ubuntu-light {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+.ubuntu-bold {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('/_assets/fonts/icomoon.eot?smohyo');
+  src: url('/_assets/fonts/icomoon.eot?#iefixsmohyo') format('embedded-opentype'), url('/_assets/fonts/icomoon.woff?smohyo') format('woff'), url('/_assets/fonts/icomoon.ttf?smohyo') format('truetype'), url('/_assets/fonts/icomoon.svg?smohyo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-advertising-strategy:before {
+  content: "\e600";
+}
+.icon-competitive-analyses:before {
+  content: "\e601";
+}
+.icon-content-strategy:before {
+  content: "\e602";
+}
+.icon-information-architecture:before {
+  content: "\e603";
+}
+.icon-marketing-solutions:before {
+  content: "\e604";
+}
+.icon-press-releases:before {
+  content: "\e605";
+}
+.icon-public-relations:before {
+  content: "\e606";
+}
+.icon-website-planning:before {
+  content: "\e607";
+}
+html {
+  font-size: 18px;
+}
+/* Modules will scale with document */
+header {
+  font-size: 1rem;
+}
+footer {
+  font-size: 1.1rem;
+}
+section {
+  font-size: 1rem;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+.inner {
+  max-width: 1206px;
+  margin: 0 auto;
+}
+.btn {
+  background-color: #1724a9;
+  opacity: .6;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1.3333333333333333em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border: none;
+  padding: 24px 32px;
+}
+.btn:hover {
+  background-color: #c6b000;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+/*=================================================*/
+/*================ ORGANIC STYLES ================*/
+/*===============================================*/
+/* (Groups of elements that are used throughout the site.) */
+/******** START MAIN HEADER AND NAVIGATION STYLES *********/
+header {
+  background: url(/_assets/img/bookcase.png) no-repeat center top transparent;
+  background-size: cover;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
+header nav {
+  padding: 76px 0 56px;
+  background-color: #fff;
+  opacity: .9;
+}
+header nav ul {
+  text-align: center;
+}
+header nav ul div.line {
+  border-bottom: 1px solid #c66c00;
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  padding-bottom: 15px;
+}
+header nav ul li {
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 1.3333333333333333em;
+  padding: 0 11%;
+}
+header nav ul li a {
+  color: #231f20;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: #c66c00;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+header nav ul li#logo {
+  padding: 0 2%;
+}
+header img#glasses {
+  width: 110%;
+  margin: 0 -5%;
+  padding: 120px 0 62px;
+}
+header div#headline {
+  background-color: #fff;
+  opacity: .9;
+}
+header div#headline h1 {
+  color: #231f20;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 1.6666666666666665em;
+  line-height: 1.2em;
+  padding: 58px 0;
+  text-align: center;
+}
+/******** START MAIN FOOTER STYLES *********/
+/*================================================*/
+/*================  PAGE STYLES  ================*/
+/*==============================================*/
+/* (Styles for pages with elements occuring in ways specific to the page.) */
+section#main {
+  padding: 104px 0 125px;
+}
+article.service {
+  width: 23%;
+  display: inline-block;
+  padding: 45px 0 36px;
+  opacity: .6;
+  margin: 0 .8% 20px;
+  cursor: pointer;
+}
+article.service span {
+  color: #fff;
+  font-size: 5em;
+  text-align: center;
+  display: block;
+  max-height: 90px;
+}
+article.service h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1.3333333333333333em;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 5px;
+  margin-top: 44px;
+}
+article.service.website-planning {
+  background-color: #c66c00;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.website-planning:hover {
+  background-color: #1724a9;
+}
+article.service.competitive-analyses {
+  background-color: #1724a9;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.competitive-analyses:hover {
+  background-color: #c6b000;
+}
+article.service.information-architecture {
+  background-color: #c6b000;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.information-architecture:hover {
+  background-color: #c66c00;
+}
+article.service.marketing-solutions {
+  background-color: #1724a9;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.marketing-solutions:hover {
+  background-color: #c6b000;
+}
+article.service.public-relations {
+  background-color: #c6b000;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.public-relations:hover {
+  background-color: #c66c00;
+}
+article.service.content-strategy {
+  background-color: #c66c00;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.content-strategy:hover {
+  background-color: #1724a9;
+}
+article.service.advertising-strategy {
+  background-color: #1724a9;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.advertising-strategy:hover {
+  background-color: #c6b000;
+}
+article.service.press-releases {
+  background-color: #c6b000;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service.press-releases:hover {
+  background-color: #c66c00;
+}
+div#box {
+  display: inline-block;
+  vertical-align: top;
+  width: 98%;
+  margin: 0 .8% 20px;
+  border: 3px dotted #eae8e9;
+  min-height: 333px;
+}
+div#box p {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.3333333333333333em;
+  color: #eae8e9;
+  text-align: center;
+  padding-top: 20px;
+}
+div#box h3 {
+  text-align: center;
+  display: block;
+}
+div#box.clue {
+  background-color: #1724a9;
+  opacity: .1;
+}
+h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1.3333333333333333em;
+  color: #231f20;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-top: 46px;
+  display: inline-block;
+}
+input {
+  display: inline-block;
+  border: 3px dotted #eae8e9;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.3333333333333333em;
+  line-height: 2.95em;
+  color: #eae8e9;
+  text-align: center;
+  width: 28%;
+  margin: 0 2%;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+input:focus {
+  color: #231f20;
+  text-align: left;
+  padding: 0 2%;
+  width: 24.2%;
+}
+/*======================================================*/
+/*================  RESPONSIVE STYLES  ================*/
+/*====================================================*/
+/*Contains ALL responsive code. Must be imported last so that it is the last css read.*/
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 17.5px;
+  }
+}

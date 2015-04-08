@@ -23,6 +23,9 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="/_assets/css/styles.css" media="screen">
 
+	<!--fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,300,400italic' rel='stylesheet' type='text/css'>
+	
 	<!-- JavaScript -->
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
