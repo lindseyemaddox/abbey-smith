@@ -90,27 +90,50 @@
 
 		</article><!--service-->
 
-		<div id="box">
-			
-			<h3>1. I'm Interested In:</h3>
-			<p>(drag boxes here)</p>
+	    <?php
+	        $email = $_REQUEST['email'] ;
+	        if (isset($_POST['submit'])) {
+	          $to = 'lindseyemaddox@gmail.com';
+	          $headers = "From: " . strip_tags($_POST['email']) . "\r\n";
+	          $headers .= "Reply-To: ". strip_tags($_POST['email']) . "\r\n";
+	          $headers .= "MIME-Version: 1.0\r\n";
+	          $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	          $message = '<html><body>';
+	          $message .= 'Email: '.$email.'<br>';
+	          $message .= '</body></html>';
+	          $subject = 'Someone is Interested in the Awesomeness that is Abbey Smith Smith';
 
-		</div><!--box-->
+	    mail($to, $subject, $message, $headers);
+	    echo "<div style='padding: 50px 20px 80px; color: #fff; text-align: center;'><label>Thank you for using our form. We will be in contact with you as soon as possible.</label></div>";
+	  }
+	else
+	  { echo "<form method='post' action='".$_SERVER['SCRIPT_NAME']."'>
 
-		<h3>2. My Email Address Is:</h3>
+			<div id='box'>
+				
+				<h3>1. I'm Interested In:</h3>
+				<p>(drag boxes here)</p>
 
-		<input type='text' name='email' id='email' size='10' placeholder='(name@domain.com)'>
+			</div><!--box-->
 
-        <button class='btn' type='submit' name='submit'>3. Contact Abbey</button>
+			<h3>2. My Email Address Is:</h3>
 
-		<input class="website-planning-check" type="checkbox" value="checked" name="website-planning">
-		<input class="competitive-analyses-check" type="checkbox" value="checked" name="competitive-analyses">
-		<input class="information-architecture-check" type="checkbox" value="checked" name="information-architecture">
-		<input class="marketing-solutions-check" type="checkbox" value="checked" name="marketing-solutions">
-		<input class="public-relations-check" type="checkbox" value="checked" name="public-relations">
-		<input class="content-strategy-check" type="checkbox" value="checked" name="content-strategy">
-		<input class="advertising-strategy-check" type="checkbox" value="checked" name="advertising-strategy">
-		<input class="press-releases-check" type="checkbox" value="checked" name="press-releases">
+			<input type='text' name='email' id='email' size='10' placeholder='(name@domain.com)'>
+
+	        <button class='btn submit' type='submit' name='submit'>3. Contact Abbey</button>
+
+			<input class='website-planning-check' type='checkbox' value='checked' name='website-planning'>
+			<input class='competitive-analyses-check' type='checkbox' value='checked' name='competitive-analyses'>
+			<input class='information-architecture-check' type='checkbox' value='checked' name='information-architecture'>
+			<input class='marketing-solutions-check' type='checkbox' value='checked' name='marketing-solutions'>
+			<input class='public-relations-check' type='checkbox' value='checked' name='public-relations'>
+			<input class='content-strategy-check' type='checkbox' value='checked' name='content-strategy'>
+			<input class='advertising-strategy-check' type='checkbox' value='checked' name='advertising-strategy'>
+			<input class='press-releases-check' type='checkbox' value='checked' name='press-releases'>
+
+		</form>";
+		      }
+		    ?>
 
 	</div><!--inner-->
 
