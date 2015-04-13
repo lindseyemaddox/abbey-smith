@@ -26,7 +26,7 @@
 
 	<div class="inner">
 		
-		<article class="service website-planning">
+		<article class="service" id="website-planning">
 			
 			<span class="icon-website-planning"></span>
 
@@ -34,7 +34,7 @@
 
 		</article><!--service-->
 
-		<article class="service competitive-analyses">
+		<article class="service" id="competitive-analyses">
 			
 			<span class="icon-competitive-analyses"></span>
 
@@ -42,7 +42,7 @@
 
 		</article><!--service-->
 
-		<article class="service information-architecture">
+		<article class="service" id="information-architecture">
 			
 			<span class="icon-information-architecture"></span>
 
@@ -50,7 +50,7 @@
 
 		</article><!--service-->
 
-		<article class="service marketing-solutions">
+		<article class="service" id="marketing-solutions">
 			
 			<span class="icon-marketing-solutions"></span>
 
@@ -58,7 +58,7 @@
 
 		</article><!--service-->
 
-		<article class="service public-relations">
+		<article class="service" id="public-relations">
 			
 			<span class="icon-public-relations"></span>
 
@@ -66,7 +66,7 @@
 
 		</article><!--service-->
 
-		<article class="service content-strategy">
+		<article class="service" id="content-strategy">
 			
 			<span class="icon-content-strategy"></span>
 
@@ -74,7 +74,7 @@
 
 		</article><!--service-->
 
-		<article class="service advertising-strategy">
+		<article class="service" id="advertising-strategy">
 			
 			<span class="icon-advertising-strategy"></span>
 
@@ -82,7 +82,7 @@
 
 		</article><!--service-->
 
-		<article class="service press-releases">
+		<article class="service" id="press-releases">
 			
 			<span class="icon-press-releases"></span>
 
@@ -100,11 +100,37 @@
 	          $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	          $message = '<html><body>';
 	          $message .= 'Email: '.$email.'<br>';
+              if (isset($_POST['website-planning'])) {
+                  $message .= 'I am interested in website planning.<br>';
+                } 
+              if (isset($_POST['competitive-analyses'])) {
+                  $message .= 'I am interested in competitive analyses.<br>';
+                } 
+              if (isset($_POST['information-architecture'])) {
+                  $message .= 'I am interested in information architecture.<br>';
+                } 
+              if (isset($_POST['marketing-solutions'])) {
+                  $message .= 'I am interested in marketing solutions.<br>';
+                } 
+              if (isset($_POST['public-relations'])) {
+                  $message .= 'I am interested in public relations.<br>';
+                } 
+              if (isset($_POST['content-strategy'])) {
+                  $message .= 'I am interested in content strategy.<br>';
+                } 
+              if (isset($_POST['advertising-strategy'])) {
+                  $message .= 'I am interested in advertising strategy.<br>';
+                } 
+              if (isset($_POST['press-releases'])) {
+                  $message .= 'I am interested in press releases.<br>';
+                } 
+                else {
+              }
 	          $message .= '</body></html>';
-	          $subject = 'Someone is Interested in the Awesomeness that is Abbey Smith Smith';
+	          $subject = 'Someone is Interested in the Awesomeness that is Abbey Smith Smith.';
 
 	    mail($to, $subject, $message, $headers);
-	    echo "<div style='padding: 50px 20px 80px; color: #fff; text-align: center;'><label>Thank you for using our form. We will be in contact with you as soon as possible.</label></div>";
+	    echo "<div id='thanks'><label>Thank you for using our form. We will be in contact with you as soon as possible.</label></div>";
 	  }
 	else
 	  { echo "<form method='post' action='".$_SERVER['SCRIPT_NAME']."'>
@@ -122,14 +148,14 @@
 
 	        <button class='btn submit' type='submit' name='submit'>3. Contact Abbey</button>
 
-			<input class='website-planning-check' type='checkbox' value='checked' name='website-planning'>
-			<input class='competitive-analyses-check' type='checkbox' value='checked' name='competitive-analyses'>
-			<input class='information-architecture-check' type='checkbox' value='checked' name='information-architecture'>
-			<input class='marketing-solutions-check' type='checkbox' value='checked' name='marketing-solutions'>
-			<input class='public-relations-check' type='checkbox' value='checked' name='public-relations'>
-			<input class='content-strategy-check' type='checkbox' value='checked' name='content-strategy'>
-			<input class='advertising-strategy-check' type='checkbox' value='checked' name='advertising-strategy'>
-			<input class='press-releases-check' type='checkbox' value='checked' name='press-releases'>
+			<input class='website-planning' type='checkbox' name='website-planning'>
+			<input class='competitive-analyses' type='checkbox' name='competitive-analyses'>
+			<input class='information-architecture' type='checkbox' name='information-architecture'>
+			<input class='marketing-solutions' type='checkbox' name='marketing-solutions'>
+			<input class='public-relations' type='checkbox' name='public-relations'>
+			<input class='content-strategy' type='checkbox' name='content-strategy'>
+			<input class='advertising-strategy' type='checkbox' name='advertising-strategy'>
+			<input class='press-releases' type='checkbox' name='press-releases'>
 
 		</form>";
 		      }
@@ -141,15 +167,28 @@
 
 <script>
 $(function() {
-	$( ".service" ).draggable();
+	$( ".service" ).draggable({
+		stop: function( event, ui ) {
+			
+
+			$(this).addClass("checked");
+
+		}
+	});
+
+  var service = $('.checked').attr('id');
+  console.log(service);
+  $("input#"+service).attr('checked', true).change();
+
 	$( "#box" ).droppable({
       hoverClass: "clue",
 	  drop: function( event, ui ) {
 	    $( this )
 	      .addClass( "ui-state-highlight" )
 	      .find( "p" )
-	        .html( "Dropped!" );
-	      $('.website-planning-check').attr('checked', true).change();
+	        .html( "Noted." );
+	      
+
 	  }
 	});
 });
