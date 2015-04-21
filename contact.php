@@ -22,7 +22,7 @@
 		          $message .= 'Phone: '.$phone.'<br>';
 		          $message .= 'How May We Help You: '.$desc.'<br>';
 		          $message .= '</body></html>';
-		          $subject = 'new form submission';
+		          $subject = 'new form submission';					
 
 		    mail($to, $subject, $message, $headers);
 		    echo "<div style='padding: 50px 20px 80px; color: #fff; text-align: center;'><label>Thank you for using our form. We will be in contact with you as soon as possible.</label></div>";
