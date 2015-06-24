@@ -26,35 +26,19 @@
 
 	<div class="inner">
 		
-		<article class="service" id="website-planning">
+		<article class="service" id="content-development">
 			
-			<span class="icon-website-planning"></span>
+			<span class="icon-content-strategy"></span>
 
-			<h2>Website Planning</h2>
+			<h2>Content Development</h2>
 
 		</article><!--service-->
 
-		<article class="service" id="competitive-analyses">
+		<article class="service" id="competitive-analysis">
 			
 			<span class="icon-competitive-analyses"></span>
 
-			<h2>Competitive Analyses</h2>
-
-		</article><!--service-->
-
-		<article class="service" id="information-architecture">
-			
-			<span class="icon-information-architecture"></span>
-
-			<h2>Information Architecture</h2>
-
-		</article><!--service-->
-
-		<article class="service" id="marketing-solutions">
-			
-			<span class="icon-marketing-solutions"></span>
-
-			<h2>Marketing Solutions</h2>
+			<h2>Competitive Analysis</h2>
 
 		</article><!--service-->
 
@@ -66,27 +50,19 @@
 
 		</article><!--service-->
 
-		<article class="service" id="content-strategy">
+		<article class="service" id="email-marketing">
 			
-			<span class="icon-content-strategy"></span>
+			<span class="icon-marketing-solutions"></span>
 
-			<h2>Content Strategy</h2>
+			<h2>Email Marketing</h2>
 
 		</article><!--service-->
 
-		<article class="service" id="advertising-strategy">
+		<article class="service" id="social-media">
 			
-			<span class="icon-advertising-strategy"></span>
+			<span class="icon-website-planning"></span>
 
-			<h2>Advertising Strategy</h2>
-
-		</article><!--service-->
-
-		<article class="service" id="press-releases">
-			
-			<span class="icon-press-releases"></span>
-
-			<h2>Press <br/>Releases</h2>
+			<h2>Social Media Management</h2>
 
 		</article><!--service-->
 
@@ -100,29 +76,20 @@
 	          $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	          $message = '<html><body>';
 	          $message .= 'Email: '.$email.'<br>';
-              if (isset($_POST['website-planning'])) {
-                  $message .= 'I am interested in website planning.<br>';
+              if (isset($_POST['social-media'])) {
+                  $message .= 'I am interested in social media management.<br>';
                 } 
-              if (isset($_POST['competitive-analyses'])) {
-                  $message .= 'I am interested in competitive analyses.<br>';
+              if (isset($_POST['competitive-analysis'])) {
+                  $message .= 'I am interested in competitive analysis.<br>';
                 } 
-              if (isset($_POST['information-architecture'])) {
-                  $message .= 'I am interested in information architecture.<br>';
-                } 
-              if (isset($_POST['marketing-solutions'])) {
-                  $message .= 'I am interested in marketing solutions.<br>';
+              if (isset($_POST['email-marketing'])) {
+                  $message .= 'I am interested in email marketing.<br>';
                 } 
               if (isset($_POST['public-relations'])) {
                   $message .= 'I am interested in public relations.<br>';
                 } 
-              if (isset($_POST['content-strategy'])) {
-                  $message .= 'I am interested in content strategy.<br>';
-                } 
-              if (isset($_POST['advertising-strategy'])) {
-                  $message .= 'I am interested in advertising strategy.<br>';
-                } 
-              if (isset($_POST['press-releases'])) {
-                  $message .= 'I am interested in press releases.<br>';
+              if (isset($_POST['content-development'])) {
+                  $message .= 'I am interested in content development.<br>';
                 } 
                 else {
               }
@@ -148,14 +115,11 @@
 
 	        <button class='btn submit' type='submit' name='submit'>3. Contact Abbey</button>
 
-			<input class='website-planning' type='checkbox' name='website-planning'>
-			<input class='competitive-analyses' type='checkbox' name='competitive-analyses'>
-			<input class='information-architecture' type='checkbox' name='information-architecture'>
-			<input class='marketing-solutions' type='checkbox' name='marketing-solutions'>
+			<input class='content-development' type='checkbox' name='content-development'>
+			<input class='competitive-analysis' type='checkbox' name='competitive-analysis'>
+			<input class='email-marketing' type='checkbox' name='email-marketing'>
+			<input class='social-media' type='checkbox' name='social-media'>
 			<input class='public-relations' type='checkbox' name='public-relations'>
-			<input class='content-strategy' type='checkbox' name='content-strategy'>
-			<input class='advertising-strategy' type='checkbox' name='advertising-strategy'>
-			<input class='press-releases' type='checkbox' name='press-releases'>
 
 		</form>";
 		      }

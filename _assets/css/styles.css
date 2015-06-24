@@ -546,11 +546,11 @@ section#main {
   padding: 104px 0 125px;
 }
 article.service {
-  width: 23%;
+  width: 19%;
   display: inline-block;
   padding: 45px 0 36px;
   opacity: .6;
-  margin: 0 .8% 20px;
+  margin: 0 .3% 20px;
   cursor: pointer;
 }
 article.service span {
@@ -563,7 +563,7 @@ article.service span {
 article.service h2 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
-  font-size: 1.3333333333333333em;
+  font-size: 1em;
   line-height: 1.3em;
   text-transform: uppercase;
   color: #fff;
@@ -571,18 +571,7 @@ article.service h2 {
   letter-spacing: 5px;
   margin-top: 44px;
 }
-article.service#website-planning {
-  background-color: #c66c00;
-  -webkit-transition: all 1000ms ease;
-  -moz-transition: all 1000ms ease;
-  -o-transition: all 1000ms ease;
-  -ms-transition: all 1000ms ease;
-  transition: all 1000ms ease;
-}
-article.service#website-planning:hover {
-  background-color: #1724a9;
-}
-article.service#competitive-analyses {
+article.service#competitive-analysis {
   background-color: #1724a9;
   -webkit-transition: all 1000ms ease;
   -moz-transition: all 1000ms ease;
@@ -590,21 +579,10 @@ article.service#competitive-analyses {
   -ms-transition: all 1000ms ease;
   transition: all 1000ms ease;
 }
-article.service#competitive-analyses:hover {
+article.service#competitive-analysis:hover {
   background-color: #c6b000;
 }
-article.service#information-architecture {
-  background-color: #c6b000;
-  -webkit-transition: all 1000ms ease;
-  -moz-transition: all 1000ms ease;
-  -o-transition: all 1000ms ease;
-  -ms-transition: all 1000ms ease;
-  transition: all 1000ms ease;
-}
-article.service#information-architecture:hover {
-  background-color: #c66c00;
-}
-article.service#marketing-solutions {
+article.service#email-marketing {
   background-color: #1724a9;
   -webkit-transition: all 1000ms ease;
   -moz-transition: all 1000ms ease;
@@ -612,7 +590,7 @@ article.service#marketing-solutions {
   -ms-transition: all 1000ms ease;
   transition: all 1000ms ease;
 }
-article.service#marketing-solutions:hover {
+article.service#email-marketing:hover {
   background-color: #c6b000;
 }
 article.service#public-relations {
@@ -626,7 +604,7 @@ article.service#public-relations {
 article.service#public-relations:hover {
   background-color: #c66c00;
 }
-article.service#content-strategy {
+article.service#content-development {
   background-color: #c66c00;
   -webkit-transition: all 1000ms ease;
   -moz-transition: all 1000ms ease;
@@ -634,30 +612,19 @@ article.service#content-strategy {
   -ms-transition: all 1000ms ease;
   transition: all 1000ms ease;
 }
-article.service#content-strategy:hover {
+article.service#content-development:hover {
   background-color: #1724a9;
 }
-article.service#advertising-strategy {
-  background-color: #1724a9;
-  -webkit-transition: all 1000ms ease;
-  -moz-transition: all 1000ms ease;
-  -o-transition: all 1000ms ease;
-  -ms-transition: all 1000ms ease;
-  transition: all 1000ms ease;
-}
-article.service#advertising-strategy:hover {
-  background-color: #c6b000;
-}
-article.service#press-releases {
-  background-color: #c6b000;
-  -webkit-transition: all 1000ms ease;
-  -moz-transition: all 1000ms ease;
-  -o-transition: all 1000ms ease;
-  -ms-transition: all 1000ms ease;
-  transition: all 1000ms ease;
-}
-article.service#press-releases:hover {
+article.service#social-media {
   background-color: #c66c00;
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+article.service#social-media:hover {
+  background-color: #c6b000;
 }
 div#box {
   display: inline-block;
