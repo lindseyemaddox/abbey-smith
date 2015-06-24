@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'].'/_assets/inc/head.php'); // HTTP head?>
+ <?php require_once($_SERVER['DOCUMENT_ROOT'].'/_assets/inc/head.php'); // HTTP head?>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -169,9 +169,7 @@
 $(function() {
 	$( ".service" ).draggable({
 		stop: function( event, ui ) {
-			
 
-			$(this).addClass("checked");
 
 		}
 	});
@@ -183,12 +181,11 @@ $(function() {
 	$( "#box" ).droppable({
       hoverClass: "clue",
 	  drop: function( event, ui ) {
-	    $( this )
-	      .addClass( "ui-state-highlight" )
-	      .find( "p" )
-	        .html( "Noted." );
+		var $this = ui.draggable;
+		var name = $this.attr('id');
+		console.log(name);
+		$('input[name="' + name + '"').prop('checked', true);
 	      
-
 	  }
 	});
 });
