@@ -181,6 +181,10 @@ $(function() {
 	$( "#box" ).droppable({
       hoverClass: "clue",
 	  drop: function( event, ui ) {
+	    $( this )
+	      .addClass( "ui-state-highlight" )
+	      .find( "p" )
+	        .html( "Noted." );
 		var $this = ui.draggable;
 		var name = $this.attr('id');
 		console.log(name);
